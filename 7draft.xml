@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<books>
+    <book id="1">
+        <BookTitle>My Beloved World</BookTitle>
+        <AuthorS>Sonia Sotomayor</AuthorS>
+        <Genre>Non Fiction</Genre>
+        <Year>2013</Year>
+        <Language>English</Language>
+    </book>
+    <book id="2">
+        <BookTitle>The Asolutely True Diary of a Part-Time Indian</BookTitle>
+        <AuthorS>Shrman Alexie</AuthorS>
+        <Genre>Fiction</Genre>
+        <Year>2007</Year>
+        <Language>English</Language>
+    </book>
+    <book id="3">
+        <BookTitle>Astronomy:A Beginner's Guide to the Universe</BookTitle>
+        <AuthorS>Eric Chaisson,Steve McMillan</AuthorS>
+        <Genre>Non Fiction</Genre>
+        <Year>2012</Year>
+        <Language>English</Language>
+   </book>
+</books>
