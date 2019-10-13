@@ -1,0 +1,39 @@
+---
+title: "Untitled"
+output: html_document
+---
+#Pick three of your favorite books on one of your favorite subjects. At least one of the books should have more than one author. For each book, include the title, authors, and two or three other attributes that you find interesting.
+
+#Take the information that you've selected about these three books, and separately create three files which store the book's information in HTML (using an html table), XML, and JSON formats (e.g. "books.html", "books.xml", and "books.json"). To help you better understand the different file structures, I'd prefer that you create each of these files "by hand" unless you're already very comfortable with the file formats.
+
+#Write R code, using your packages of choice, to load the information from each of the three sources into separate R data frames. Are the three data frames identical?
+
+#Your deliverable is the three source files and the R code. If you can, package your assignment solution up into an .Rmd file and publish to rpubs.com. [This will also require finding a way to make your three text files accessible from the web].
+```{r}
+library(RCurl)
+library(XML)
+library(jsonlite)
+```
+#I created the html file by hand. Now I load html file in R
+```{r}
+Book_html <- "https://raw.githubusercontent.com/Zchen116/assignment-7/master/7draft.html"
+htmlContent <- getURLContent(Book_html)
+booksHTML <- readHTMLTable(htmlContent)
+booksHTML <- booksHTML[[1]]
+booksHTML
+```
+#I created the xml file by hand. Now I load xml file in R
+```{r}
+Book_xml <- "https://raw.githubusercontent.com/Zchen116/assignment-7/master/7draft.xml"
+xmlContent <- getURLContent(Book_xml)
+booksXMLparsed <- xmlParse(xmlContent)
+booksXML <- xmlToDataFrame(booksXMLparsed)
+booksXML
+```
+#I created the json file by hand. Now I load json file in R
+```{r}
+Book_json <- "https://raw.githubusercontent.com/Zchen116/assignment-7/master/7draft.json"
+booksJSON <- fromJSON(Book_json)
+booksJSON <- booksJSON[[1]]
+booksJSON
+```
